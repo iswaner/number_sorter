@@ -1,6 +1,14 @@
 import random
+length = "num"
 
-length = int(input("Pick how many numbers to sort: "))
+while True:
+    try:
+        length = int(input("Pick how many numbers to sort: "))
+        break
+    except ValueError:
+        print("Enter a valid positive number.")
+        continue
+
 first = "x"
 choice = input("Ascending, Descending, or Shuffled? ")
 first = choice[0].lower()
